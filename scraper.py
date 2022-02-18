@@ -65,7 +65,7 @@ def send_mail():
 
     server.quit()
 
-# Function check_price() call in regular intervals
+# check_price() function call invoked every hour
 while (True):
     check_price()
     time.sleep(3600)
