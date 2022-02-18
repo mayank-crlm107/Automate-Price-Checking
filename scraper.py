@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+import time
 
 # The below URL points to 'Lenovo Legion 7i Core i7 10th Gen' laptop on flipkart
 # You may change the URL as you please
@@ -64,5 +65,7 @@ def send_mail():
 
     server.quit()
 
-# Function check_price() call
-check_price()
+# Function check_price() call in regular intervals
+while (True):
+    check_price()
+    time.sleep(3600)
