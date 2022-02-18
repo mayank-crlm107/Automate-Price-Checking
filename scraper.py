@@ -44,7 +44,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
     # Enter your email id and password respectively below
-    server.login('sender email id', 'sender email password')
+    server.login('<sender email id>', '<sender email password>')
 
     # The email sent will have the following format
     subject = 'Price Fell Down !'
