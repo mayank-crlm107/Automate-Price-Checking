@@ -8,7 +8,7 @@ URL = 'https://www.flipkart.com/lenovo-legion-7i-core-i7-10th-gen-16-gb-1-tb-ssd
 
 # Instead of the '#' charcater below, enter your User Agent
 # You can find out your User Agent by searching 'my user agent' on google 
-headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36'}
+headers = {"User-Agent": '<Enter your User Agent>'}
 
 def check_price():
     page = requests.get(URL, headers=headers)
@@ -44,7 +44,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
     # Enter your email id and password respectively below
-    server.login('mayank.n.motwani@gmail.com', 'pdurifrboksmbnzv')
+    server.login('sender email id', 'sender email password')
 
     # The email sent will have the following format
     subject = 'Price Fell Down !'
@@ -52,8 +52,8 @@ def send_mail():
 
     msg = f"Subject: {subject}\n\n{body}"
 
-    sender = 'mayank.n.motwani@gmail.com'
-    recipients = ['mayank.n.motwani@gmail.com', '2018.mayank.motwani@ves.ac.in']
+    sender = '<sender email id>'
+    recipients = ['<email id1>', '<email id2']
 
     server.sendmail(
         sender,
